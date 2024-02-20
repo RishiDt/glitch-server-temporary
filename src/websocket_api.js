@@ -1,8 +1,8 @@
 const http = require("http");
-// const express = require("express");
+
 const socketIo = require("socket.io");
 
-// const app = require('./firestore_api');
+
 const app = require('express')();
 const server = http.createServer(app);
 const io = socketIo(server);
@@ -89,8 +89,8 @@ io.on("connection", (socket) => {
   });
 });
 
-console.log("websocket_api is being imported...");
-module.exports=app;
+// console.log("websocket_api is being imported...");
+module.exports=server;
 // const PORT = process.env.PORT || 3000;
 // server.listen(PORT, () => {
 //   console.log(`Server running on http://localhost:${PORT}`);

@@ -4,7 +4,7 @@
   "description": "A simple Node app built on fastify, instantly up and running. Built to be remixed on Glitch.com.",
   "main": "./src/index.js",
   "scripts": {
-    "start": "node ./src/index.js"
+    "start": "node ./src/websocket_api.js"
   },
   "dependencies": {
     "fastify": "^4.21.0",
