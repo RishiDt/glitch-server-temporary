@@ -89,9 +89,9 @@ io.on("connection", (socket) => {
   });
 });
 
-// console.log("websocket_api is being imported...");
-// module.exports=server;
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`socket server listening on ${PORT}`);
 });
+
+console.log("websocket_api imported");
