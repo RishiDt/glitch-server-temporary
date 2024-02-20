@@ -1,17 +1,18 @@
 const express = require('express');
 const expressApp = express();
-const expressApp = require('./websocket_api');
+const socket_server = require('./websocket_api');
+const firestore_exp_app = require('./firestore_api');
 
  require('./websocket_api')
-const FIREBASE_API_PORT =5000;
+const FIRESTORE_API_PORT =5000;
 
 
   
-expressApp.listen(PORT,(req,res)=>{
-console.log(`Server listening on port ${PORT}.`);
+firestore_exp_app.listen(FIRESTORE_API_PORT,(req,res)=>{
+console.log(`firestore_api listening on ${FIRESTORE_API_PORT}.`);
 })
 
-const WEBSOCKET_API_PORT = process.env.PORT || 3000;
-server.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+const WEBSOCKET_API_PORT =3000;
+socket_server.listen(WEBSOCKET_API_PORT, () => {
+  console.log(`socket_api listening on:${WEBSOCKET_API_PORT}`);
 });
