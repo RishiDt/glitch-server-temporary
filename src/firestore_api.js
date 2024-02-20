@@ -3,10 +3,7 @@ const expressApp = express();
 const firestoreDb = require('./firestore_init');
 const firebase= require('firebase-admin');
 
-// const PORT =5000;
-// expressApp.listen(PORT,(req,res)=>{
-// console.log(`Server listening on port ${PORT}.`);
-// })
+
 
 console.log("firestore_api imported");
 
@@ -221,4 +218,8 @@ res.send(error);
 }
 )
 
-module.exports=expressApp;
+// module.exports=expressApp;
+const PORT =5000;
+expressApp.listen(PORT,(req,res)=>{
+console.log(`Server listening on port ${PORT}.`);
+})
