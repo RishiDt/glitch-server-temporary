@@ -2,7 +2,8 @@ const http = require("http");
 // const express = require("express");
 const socketIo = require("socket.io");
 
-const app = require('./firestore_api');
+// const app = require('./firestore_api');
+const app = require('express')();
 const server = http.createServer(app);
 const io = socketIo(server);
 
